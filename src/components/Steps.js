@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Button from './Button';
+import Message from './Message';
 
 const messages = [
 	'Learn React ⚛️',
@@ -17,12 +18,6 @@ function Steps() {
 	const handlePrevClick = () => (step >= 1 ? setStep((s) => s - 1) : null);
 	const handleNextClick = () => (step <= 1 ? setStep((s) => s + 1) : null);
 
-	const renderMessage = (stepVal) => (
-		<span>
-			Step {stepVal + 1}: {messages[stepVal]}
-		</span>
-	);
-
 	return (
 		<div className='steps'>
 			<div className='numbers'>
@@ -30,7 +25,7 @@ function Steps() {
 				<div className={step >= 1 ? 'active' : ''}>2</div>
 				<div className={step >= 2 ? 'active' : ''}>3</div>
 			</div>
-			<p className='message'>{renderMessage(step)}</p>
+			<Message step={step}>{messages[step]}</Message>
 			<div className='buttons'>
 				<Button
 					textColor={buttonTextColor}
