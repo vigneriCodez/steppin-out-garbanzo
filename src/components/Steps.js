@@ -8,6 +8,9 @@ const messages = [
 	'Invest your new income 🤑',
 ];
 
+const buttonTextColor = '#fff';
+const buttonBgColor = '#7950f2';
+
 function Steps() {
 	const [step, setStep] = useState(0);
 
@@ -29,10 +32,18 @@ function Steps() {
 			</div>
 			<p className='message'>{renderMessage(step)}</p>
 			<div className='buttons'>
-				<Button textColor='#fff' bgColor='#7950f2' onClick={handlePrevClick}>
+				<Button
+					textColor={buttonTextColor}
+					bgColor={buttonBgColor}
+					onClick={handlePrevClick}
+				>
 					<span>👈</span> Previous
 				</Button>
-				<Button textColor='#fff' bgColor='#7950f2' onClick={handleNextClick}>
+				<Button
+					textColor={buttonTextColor}
+					bgColor={buttonBgColor}
+					onClick={handleNextClick}
+				>
 					Next <span>👉</span>
 				</Button>
 			</div>
