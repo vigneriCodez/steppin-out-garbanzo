@@ -29,20 +29,12 @@ function Steps() {
 			</div>
 			<p className='message'>{renderMessage(step)}</p>
 			<div className='buttons'>
-				<Button
-					textColor='#fff'
-					bgColor='#7950f2'
-					onClick={handlePrevClick}
-					text='Previous'
-					emoji='👈'
-				/>
-				<Button
-					textColor='#fff'
-					bgColor='#7950f2'
-					onClick={handleNextClick}
-					text='Next'
-					emoji='👉'
-				/>
+				<Button textColor='#fff' bgColor='#7950f2' onClick={handlePrevClick}>
+					<span>👈</span> Previous
+				</Button>
+				<Button textColor='#fff' bgColor='#7950f2' onClick={handleNextClick}>
+					Next <span>👉</span>
+				</Button>
 			</div>
 		</div>
 	);
